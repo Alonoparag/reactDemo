@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import IngredientList from './IngredientList';
 import './Recipe.css';
 
 class Recipe extends Component{
   render(){
     const {title, img, instructions} = this.props;
-    const ingredients = this.props.ingredients.map((ing, index) =>(<li key={index}>{ing}</li>));
     return(
       <div className = "recipe-card">
         <div className="recipe-card-img">
@@ -12,11 +12,9 @@ class Recipe extends Component{
         </div>
         <div className="recipe-card-content">
           <h3>{title}</h3>
-          <ul>
-            <h4 className="recipe-title">Ingredients:</h4>
-            {ingredients}
-          </ul>
-          <h4>Instructions:</h4>
+          <h5 className="recipe-title">Ingredients:</h5>
+          <IngredientList/>
+          <h5>Instructions:</h5>
           <p>{instructions}</p>
         </div>
       </div>
