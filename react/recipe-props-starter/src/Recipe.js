@@ -4,7 +4,7 @@ class Recipe extends Component{
   render(){
     const {title} = this.props;
     const ingredients = this.props.ingredients.map((ing, index) =>(<li key={index}>{ing}</li>));
-    retrun(
+    return(
       <div>
         {title}
         <ul>
@@ -14,3 +14,5 @@ class Recipe extends Component{
     )
   }
 }
+
+export default Recipe;
