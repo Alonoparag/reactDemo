@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import './Pet.css'
+import HobbyList from './HobbyList';
 
 class Pet extends Component {
   render() {
@@ -9,7 +11,7 @@ class Pet extends Component {
           fontSize: '2em',
           margin: '2px'
         }}>Hobbies:</h5>
-      <HobbyList/>
+       <HobbyList/>
     </div>)
   }
 }
