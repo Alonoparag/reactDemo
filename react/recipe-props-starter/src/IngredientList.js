@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class IngredientList extends Component{
   static defaultProps ={
@@ -12,6 +13,6 @@ class IngredientList extends Component{
       </ul>
     );
   }
-} 
+}
 
 export default IngredientList;
