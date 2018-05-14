@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import IngredientList from './IngredientList';
+//import IngredientList from './IngredientList';
 import './Recipe.css';
 
 class Recipe extends Component{
   render(){
     const {title, img, instructions} = this.props;
+    const ingredients = this.props.ingredients;
     return(
       <div className = "recipe-card">
         <div className="recipe-card-img">
