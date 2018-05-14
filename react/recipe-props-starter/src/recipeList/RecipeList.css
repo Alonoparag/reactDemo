@@ -1,0 +1,9 @@
+.RecipeList{
+    max-width: 80%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: none;
+    box-sizing: content-box;
+    height: auto;
+}

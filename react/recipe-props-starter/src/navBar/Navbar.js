@@ -9,7 +9,7 @@ class Navbar extends Component{
     return(
         <nav>
         <ul>
-          <label>Navbar</label>
+          <label>RecipeApp</label>
           {this.props.links.map((element, index)=>(
             <li className = "nav-btn" key = {index}><a href = {element.link}>{element.name}</a></li>
         ))}

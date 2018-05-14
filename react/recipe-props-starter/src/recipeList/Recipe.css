@@ -6,13 +6,25 @@
   background-color: white;
   border-radius: 0 0 2px 2px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+  display: box;
+  box-sizing: border-box;
+  
 }
 
 .recipe-card-content{
+  box-sizing: inherit;
   padding: 16px;
+  display: box;
+  overflow:hidden;
+}
+.recipe-card-content p{
+  box-sizing: inherit;
+  display: box;
+  flex-direction: column;
 }
 
 .recipe-card-img{
+  box-sizing: inherit;
   overflow: hidden;
   height: 50%;
 }
