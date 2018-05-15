@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const colorBox = color =>{
+const colorBox = (color, key) =>{
   let style = {
-    height: '40px',
-    width: '40px',
+    height: '100px',
+    width: '100px',
+    borderRadius: '20px',
     display: 'inline-block',
     margin: '2px',
-    backgroundColor: 'blue'
-  }
-  return <div style = {style}></div>
+    backgroundColor: color
+  };
+  return <div key = {key} style = {style}></div>;
 };
 
 class App extends Component {
   //32 boxes
   //1 property
 
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-  }
+  // }
 
   render() {
     const rndColor = ()=>{
-      return Math.floor(Math.random()*this.props.allColors.length)
-    }
+      return Math.floor(Math.random()*this.props.allColors.length);
+    };
       const boxes = [];
-      for (let i = 0; i<35; i++){
-        boxes.push(colorBox(this.props.allColors[rndColor()]));
+      for (let i = 0; i<32; i++){
+        boxes.push(colorBox(this.props.allColors[rndColor()],i));
       }
     return (
       <div className="App">
