@@ -18,15 +18,21 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+
   }
 
   render() {
-
+    const rndColor = ()=>{
+      return Math.floor(Math.random()*this.props.allColors.length)
+    }
+      const boxes = [];
+      for (let i = 0; i<35; i++){
+        boxes.push(colorBox(this.props.allColors[rndColor()]));
+      }
     return (
       <div className="App">
-        {for (let i = 0; i < 35; i++){
-          colorBox()
-        }}
+          {colorBox()}
+          {boxes}
       </div>
     );
   }
