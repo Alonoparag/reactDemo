@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const colorBox = color =>();
+const colorBox = color =>{
+  let style = {
+    height: '40px',
+    width: '40px',
+    display: 'inline-block',
+    margin: '2px',
+    backgroundColor: 'blue'
+  }
+  return <div style = {style}></div>
+};
 
 class App extends Component {
   //32 boxes
   //1 property
-  
-  /*constructor(props) {
+
+  constructor(props) {
     super(props);
-  }*/
-  
+  }
+
   render() {
 
     return (
       <div className="App">
-        Render boxes here
+        {for (let i = 0; i < 35; i++){
+          colorBox()
+        }}
       </div>
     );
   }
