@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -23,7 +22,7 @@ class App extends Component {
       ]
     };
     function rndNum(length){
-      return Math.floor(Math.random()*length)
+      return Math.floor(Math.random()*length);
     }
     setTimeout(()=>{
       //select a random instructors
@@ -34,12 +33,12 @@ class App extends Component {
         instructorKey = rndNum(this.state.instructors.length);
         instructor = this.state.instructors[instructorKey];
       }
-      let hobbyKey = rndNum(instructor.hobbies.length)
+      let hobbyKey = rndNum(instructor.hobbies.length);
       //create a local copy of instructors array and splice that hobby
       let withoutHobby = JSON.parse(JSON.stringify(this.state));
       withoutHobby.instructors[instructorKey].hobbies.splice(hobbyKey, 1);
-      this.setState({withoutHobby})
-    }, 5000)
+      this.setState(withoutHobby);
+    }, 5000);
   }
   render() {
     const instructors = this.state.instructors.map((instructor, index) => (<li key={index}>
