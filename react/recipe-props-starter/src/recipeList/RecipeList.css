@@ -1,9 +1,10 @@
 .RecipeList{
     max-width: 80%;
+    margin: 10px 5%;
     display: inline-flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    overflow: none;
-    box-sizing: content-box;
-    height: auto;
+    flex-wrap:wrap;
+    float: left;
+    overflow: visible;
+    height: 300px;
 }

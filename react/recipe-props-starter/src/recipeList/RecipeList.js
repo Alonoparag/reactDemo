@@ -17,7 +17,28 @@ class RecipeList extends Component{
           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
             instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
             img= "eggyogmint.jpg"
+           />{/*
+           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
+            instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
+            img= "eggyogmint.jpg"
            />
+           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
+            instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
+            img= "eggyogmint.jpg"
+           />
+           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
+            instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
+            img= "eggyogmint.jpg"
+           />
+           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
+            instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
+            img= "eggyogmint.jpg"
+           />
+           <Recipe title = "Smoked Eggplant with Yogurt, Mint and parsley" ingredients ={['2 large eggplants', '300ml yogurt', '1 cup mint', '1 cup parsley', '2 cloves of garlic', '2 small cucumbers, the non hydrophonic variety']}
+            instructions="Smoke the eggplants untill the skin can be peeled effortlessly.\n Peel the eggplants and let them sit over a sieve for 10 minutes, so they will lose excess liquids.\n Grate the cucumbers, and squeeze the water out of the puree. Mix the ingredients and season with lemon, salt and black pepper."
+            img= "eggyogmint.jpg"
+           />*/}
+           {this.props.children}
       </div>
     )
   }
