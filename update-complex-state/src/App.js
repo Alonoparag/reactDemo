@@ -22,6 +22,24 @@ class App extends Component {
         }
       ]
     };
+    function rndNum(length){
+      return Math.floor(Math.random()*length)
+    }
+    setTimeout(()=>{
+      //select a random instructors
+      let instructorKey = rndNum(this.state.instructors.length);
+      let instructor = this.state.instructors[instructorKey];
+      //see if the hobby arrray is not empty
+      while(instructor.hobbies.length <= 0){
+        instructorKey = rndNum(this.state.instructors.length);
+        instructor = this.state.instructors[instructorKey];
+      }
+      let hobbyKey = rndNum(instructor.hobbies.length)
+      //create a local copy of instructors array and splice that hobby
+      let withoutHobby = JSON.parse(JSON.stringify(this.state));
+      withoutHobby.instructors[instructorKey].hobbies.splice(hobbyKey, 1);
+      this.setState({withoutHobby})
+    }, 5000)
   }
   render() {
     const instructors = this.state.instructors.map((instructor, index) => (<li key={index}>
