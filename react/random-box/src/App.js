@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const colorBox = (color, key) =>{
+const Box = ({color}) =>{
   let style = {
     height: '100px',
     width: '100px',
@@ -10,29 +10,39 @@ const colorBox = (color, key) =>{
     margin: '2px',
     backgroundColor: color
   };
-  return <div key = {key} style = {style}></div>;
+  return <div style = {style}/>;
 };
+
+const BOXES_NUM = 32;
 
 class App extends Component {
   //32 boxes
   //1 property
 
-  // constructor(props) {
-  //   super(props);
+  constructor(props) {
+    super(props);
+    const boxes= Array(BOXES_NUM).fill().map(this.getRandomdColor, this);
+    this.state = {boxes};
 
-  // }
+    // setTimeout(()=>{
+    //   console.log(boxes);
+    // }, 100);
+    setInterval(()=>{
+      const boxes = this.state.boxes.slice();
+      let randomSelector = Math.floor(Math.random()*boxes.length);
+      boxes[randomSelector] = this.getRandomdColor();
+      this.setState({boxes});
+    },100)
+  }
+  getRandomdColor(){
+    let colorIndex = Math.floor(Math.random()*this.props.allColors.length);
+    return this.props.allColors[colorIndex];
+  }
 
   render() {
-    const rndColor = ()=>{
-      return Math.floor(Math.random()*this.props.allColors.length);
-    };
-      const boxes = [];
-      for (let i = 0; i<32; i++){
-        boxes.push(colorBox(this.props.allColors[rndColor()],i));
-      }
+      const boxes = this.state.boxes.map((color, index) => <Box key = {index} color = {color}/>);
     return (
       <div className="App">
-          {colorBox()}
           {boxes}
       </div>
     );
