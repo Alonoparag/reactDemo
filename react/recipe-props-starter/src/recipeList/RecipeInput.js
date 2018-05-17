@@ -7,7 +7,7 @@ class RecipeInput extends Component{
 
     }
   }
-  construtor(props){
+  constructor(props){
     super(props);
       this.state = {
           title: '',
@@ -110,7 +110,7 @@ class RecipeInput extends Component{
                   </button>
         </form>
       </div>
-    )
+    );
   }
 }
 

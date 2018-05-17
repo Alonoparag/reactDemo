@@ -37,7 +37,7 @@ class RecipeApp extends Component {
     return (
       <div className="App">
         <Navbar/>
-        <recipeInput/>
+        <RecipeInput/>
         <RecipeList recipes = {this.state.recipes}/>
 
       </div>
