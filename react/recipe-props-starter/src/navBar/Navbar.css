@@ -3,7 +3,8 @@ nav{
   border:solid 2px rgba(0, 0, 120, 0.7);
   border-radius: 20px;
   margin: 10px;
-  color: black;
+  color: white;
+  background-color:blue;
 }
 ul li{
   list-style: none;
@@ -23,5 +24,5 @@ label{
 .nav-btn a:hover{
   color: inherit;
   text-decoration-line: none;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid white;
 }
