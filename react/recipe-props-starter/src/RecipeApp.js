@@ -9,7 +9,6 @@ class RecipeApp extends Component {
       <div className="App">
         <Navbar/>
         <RecipeList/>
-
       </div>
     );
   }
