@@ -54,7 +54,7 @@ class App extends Component {
           tasks.push(this.state.newTask);
           let newTask = "";
           this.setState({tasks, newTask});
-          
+
         }}>
           <input type="text" name="newTask" placeholder="What needs to be done?" value={this.state.newTask} onChange={(e)=>{
             let newTask = JSON.parse(JSON.stringify(this.state));
