@@ -34,7 +34,7 @@ class RecipeInput extends Component{
     const ingredients = this.state.ingredients.map((ing, i)=>
       i == index ? e.target.value: ing
     )
-    this.setState({ingredients})
+    this.setState({ingredients});
   }
 
   render(){
@@ -95,7 +95,7 @@ class RecipeInput extends Component{
                 autoComplete='off'
                 value={instructions}
                 onChange={this.handleChange}/>
-                {inputs }
+                {inputs}
                 <button
                   type="button"
                   onClick={this.handleNewIngredient}
