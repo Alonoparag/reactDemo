@@ -33,7 +33,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      tasks: ["Hurray I'm your first task"]
+      tasks: ["Hurray I'm your first task"],
+      newTask: ""
     };
     this.updateForm = this.updateForm.bind(this);
   }
@@ -49,10 +50,16 @@ class App extends Component {
         <h1>To Do App</h1>
         <form onSubmit={(e)=>{
           e.preventDefault();
-          console.log(this);
+          let tasks = this.state.tasks.slice();
+          tasks.push(this.state.newTask);
+          let newTask = "";
+          this.setState({tasks, newTask});
+
         }}>
           <input type="text" name="newTask" placeholder="What needs to be done?" value={this.state.newTask} onChange={(e)=>{
-            this.setState({newTask: e.target.value});
+            let newTask = JSON.parse(JSON.stringify(this.state));
+            newTask.newTask = e.target.value;
+            this.setState(newTask);
           }}
           />
           <button>Save</button>
