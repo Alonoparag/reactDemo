@@ -56,7 +56,6 @@ class RecipeInput extends Component{
       return <div
         className="recipe-form-line"
         key={`ingredient-${i}`}
-        sty
         >
         <label>{i+1}
           <input
@@ -66,7 +65,7 @@ class RecipeInput extends Component{
             }
             size={45}
             autoComplete="off"
-            placeHolder=" Ingredient"
+            placeholder=" Ingredient"
             onChange = {this.handleChangeIng}/>
         </label>
       </div>

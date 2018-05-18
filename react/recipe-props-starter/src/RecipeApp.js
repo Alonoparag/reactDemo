@@ -42,7 +42,7 @@ class RecipeApp extends Component {
       // prevState.recipes.push(newRecipe, nextRecipeId+1);
       return {
         nextRecipeId: prevState.nextRecipeId + 1,
-        recipe: {...this.state.recipes, newRecipe}
+        recipes: [...this.state.recipes, newRecipe]
       };
     })
   }
