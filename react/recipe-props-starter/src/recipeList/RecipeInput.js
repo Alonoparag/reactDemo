@@ -5,7 +5,8 @@ class RecipeInput extends Component{
   static defaultProps ={
     onClose(){
 
-    }
+    },
+    onSave(){}
   }
   constructor(props){
     super(props);
@@ -18,6 +19,7 @@ class RecipeInput extends Component{
       this.handleChange = this.handleChange.bind(this);
       this.handleNewIngredient = this.handleNewIngredient.bind(this);
       this.handleChangeIng = this.handleChangeIng.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e){
@@ -36,6 +38,16 @@ class RecipeInput extends Component{
     )
     this.setState({ingredients});
   }
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.onSave({...this.state});
+    this.setState({
+      title: '0',
+      ingredients:[''],
+      instructions:'',
+      img:''
+    })
+  }
 
   render(){
     const {onClose} = this.props;
@@ -50,7 +62,8 @@ class RecipeInput extends Component{
           <input
             type = "text"
             name = {`ingredient-${i}`}
-            value={ing}
+            value={ing
+            }
             size={45}
             autoComplete="off"
             placeHolder=" Ingredient"
