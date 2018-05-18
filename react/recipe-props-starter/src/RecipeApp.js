@@ -50,9 +50,11 @@ class RecipeApp extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
+        <Navbar onNewRecipe={()=>this.setState({showForm: true})}/>
         {showForm?
-          <RecipeInput onSave = {this.handleSave}/>: null}
+          <RecipeInput
+            onClose={()=>this.setState({showForm: false})}
+            onSave = {this.handleSave}/>: null}
         <RecipeList recipes = {this.state.recipes}/>
 
       </div>
