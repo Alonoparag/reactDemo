@@ -3,8 +3,16 @@ import IngredientList from './IngredientList';
 import './Recipe.css';
 
 class Recipe extends Component{
+  static propTypes={
+    title: PropTypes.string.isRequired,
+    ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
+    instructions: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    onDelete: PropTypes.function.isRequired
+  }
   render(){
-    const {title, img, instructions} = this.props;
+    const {title, img, instructions, id, onDelete} = this.props;
 
     return(
       <div className = "recipe-card">
@@ -17,6 +25,8 @@ class Recipe extends Component{
           <IngredientList ingredients = {this.props.ingredients}/>
           <h5>Instructions:</h5>
           <p>{instructions}</p>
+          <button type="button" onClick={(=>onDelete(id))}>DELETE</button>
+
         </div>
       </div>
     )
