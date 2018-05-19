@@ -20,6 +20,7 @@ class RecipeInput extends Component{
       this.handleNewIngredient = this.handleNewIngredient.bind(this);
       this.handleChangeIng = this.handleChangeIng.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleChange(e){
